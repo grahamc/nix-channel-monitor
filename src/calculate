@@ -38,7 +38,8 @@ EOF
 
 filter_recent_timestamps() {
   since=$(date -d "3 months ago" "+%s")
-  while read commit committed timestamp; do
+  # shellcheck disable=SC2034
+  while read -r commit _committed timestamp; do
     if [ "$timestamp" -ge "$since" ]; then
       echo "$commit $timestamp"
     fi
@@ -47,7 +48,7 @@ filter_recent_timestamps() {
 
 datapoints() {
   cat | filter_recent_timestamps |
-    awk '{ print "    [\""$1"\", "$2"000, '$i'],"; }'
+    awk '{ print "    [\""$1"\", "$2"000, '"$i"'],"; }'
 }
 
 make_graph() {
@@ -73,12 +74,12 @@ EOF
 
   find . -name history-v2 | sort -h -t- -k1 -k2 | (
     i=1
-    while read file; do
+    while read -r file; do
       datapoints=$(datapoints <"$file")
       dbg "Processing $file"
       name=$(echo "$file" | cut -d/ -f2)
 
-      if [ $(echo -n "$datapoints" | wc -c) -ge 1 ]; then
+      if [ "$(printf "%s" "$datapoints" | wc -c)" -ge 1 ]; then
         echo "{name: '$name', type: 'scatter', keys: ['commit', 'x', 'y'],"
         echo 'point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},'
         echo "data: ["
@@ -99,7 +100,6 @@ EOF
 EOF
 }
 
-readonly CHAN="#nixos"
 readonly URL="https://channels.nix.gsc.io"
 readonly remote="origin"
 readonly gitrepo="$1"
@@ -151,7 +151,7 @@ readonly dest="$2"
           dbg "Change in ${branch}"
           (
             cd "$gitrepo" >&2
-            echo -n "Channel $branch advanced to "
+            printf "Channel %s advanced to " "$branch"
             git show -s --format="https://github.com/NixOS/nixpkgs/commit/%h (from %cr, history: $URL/$name)" "$remote/$branch"
           ) | publish
           mv latest.next latest
