@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set - eux
+remote=https://github.com/nixos/nixpkgs.git
+if [ ! -d ./nixpkgs ]; then
+  git clone "$remote" ./nixpkgs
+fi
+
+git -C ./nixpkgs remote set-url origin "$remote"
+
+calculate "$PWD/nixpkgs" "./data"
+
+git add ./data
+git commit -m "Automatic channel data update."
+git push vaultpush main

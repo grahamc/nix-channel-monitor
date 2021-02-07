@@ -8,17 +8,20 @@ pkgs.resholvePackage {
   src = ./src;
   preBuild = ''
     shellcheck ./calculate
+    shellcheck ./calculate-and-push
   '';
   nativeBuildInputs = [ pkgs.shellcheck ];
   installPhase = ''
     install -Dv calculate $out/bin/calculate
+    install -Dv calculate-and-push $out/bin/calculate-and-push
   '';
 
   solutions.calculate = {
-    scripts = [ "bin/calculate" ];
+    scripts = [ "bin/calculate" "bin/calculate-and-push" ];
     interpreter = "${pkgs.oil}/bin/osh";
 
     inputs = with pkgs; [
+      (placeholder "out")
       coreutils
       curl
       findutils
@@ -30,18 +33,3 @@ pkgs.resholvePackage {
     ];
   };
 }
-/*
-
-
-    set - eux
-    remote=https://github.com/nixos/nixpkgs.git
-  if [ ! -d /var/lib/nix-channel-monitor/git ];
-  then
-  git clone "$remote" git
-  fi
-  git -C /var/lib/nix-channel-monitor/git remote set-url origin "$remote"
-
-
-
-  ${src} /var/lib/nix-channel-monitor/git ${config.services.nginx.virtualHosts."channels.nix.gsc.io".root}
-*/
