@@ -11,5 +11,8 @@ git -C ./nixpkgs remote set-url origin "$remote"
 calculate "$PWD/nixpkgs" "./data"
 
 git add ./data
-git commit -m "Automatic channel data update."
-git push vaultpush main
+
+if ! git diff --cached --exit-code; then
+  git commit -m "Automatic channel data update."
+  git push vaultpus HEAD:"$BUILDKITE_BRANCH"
+fi

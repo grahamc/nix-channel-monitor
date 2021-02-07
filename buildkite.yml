@@ -1,0 +1,14 @@
+env:
+  GIT_AUTHOR_NAME: Buildkite
+  GIT_AUTHOR_EMAIL: ci@buildkite
+  GIT_COMMITTER_NAME: Buildkite
+  GIT_COMMITTER_EMAIL: ci@buildkite
+
+steps:
+  - label: "Record Channel Updates"
+    commands:
+      - nix-build
+      - ./enter-env.sh ./result/bin/calculate-and-push
+    agents:
+      nix-channel-monitor: true
+
