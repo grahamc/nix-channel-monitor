@@ -1,0 +1,241 @@
+#!/bin/sh
+
+set -eu
+
+dbg() {
+  :
+  echo "$@" >&2
+}
+
+publish() {
+  msg=$(cat | head -n1)
+  curl -v \
+    -H "content-type:application/json" \
+    -XPOST \
+    AMQPAPI/api/exchanges/ircbot/amq.default/publish \
+    --data @- <<-EOF
+{
+    "properties": {},
+    "routing_key": "queue-publish",
+    "payload_encoding": "string",
+    "payload": "{\"target\": \"#nixos\", \"body\": \"$msg\", \"message_type\": \"notice\"}"
+}
+EOF
+  curl -v \
+    -H "content-type:application/json" \
+    -XPOST \
+    AMQPAPI/api/exchanges/ircbot/amq.default/publish \
+    --data @- <<-EOF
+{
+    "properties": {},
+    "routing_key": "queue-publish",
+    "payload_encoding": "string",
+    "payload": "{\"target\": \"#nixos-bots\", \"body\": \"$msg\", \"message_type\": \"notice\"}"
+}
+EOF
+
+}
+
+filter_recent_timestamps() {
+  since=$(date -d "3 months ago" "+%s")
+  while read commit committed timestamp; do
+    if [ "$timestamp" -ge "$since" ]; then
+      echo "$commit $timestamp"
+    fi
+  done
+}
+
+datapoints() {
+  cat | filter_recent_timestamps |
+    awk '{ print "    [\""$1"\", "$2"000, '$i'],"; }'
+}
+
+make_graph() {
+  cat <<EOF
+  <div id="container"></div>
+  <script src='https://code.highcharts.com/highcharts.js'></script>
+
+    <script>
+    Highcharts.chart('container', {
+  xAxis: {
+    type: 'datetime'
+  },
+  yAxis: {
+    title: {
+      text: "",
+    },
+    labels: {
+      enabled: false,
+    },
+  },
+  series: [
+EOF
+
+  find . -name history-v2 | sort -h -t- -k1 -k2 | (
+    i=1
+    while read file; do
+      datapoints=$(datapoints <"$file")
+      dbg "Processing $file"
+      name=$(echo "$file" | cut -d/ -f2)
+
+      if [ $(echo -n "$datapoints" | wc -c) -ge 1 ]; then
+        echo "{name: '$name', type: 'scatter', keys: ['commit', 'x', 'y'],"
+        echo 'point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},'
+        echo "data: ["
+        echo "$datapoints"
+        echo "]},"
+      else
+        dbg "Skipping $file for no datapoints" >&2
+      fi
+
+      i=$((i + 1))
+    done
+  )
+  cat <<EOF
+  ]
+});
+  </script>
+  <noscript>you need to enable javascript to view the graph</noscript>
+EOF
+}
+
+readonly CHAN="#nixos"
+readonly URL="https://channels.nix.gsc.io"
+readonly remote="origin"
+readonly gitrepo="$1"
+readonly dest="$2"
+
+(
+  cd "$gitrepo" >&2
+  git fetch "$remote" >&2
+  git for-each-ref --format '%(refname:strip=3)' \
+    "refs/remotes/$remote/nixos-*" "refs/remotes/$remote/nixpkgs-*"
+) | grep -v HEAD |
+  (
+    cd "$dest"
+    while read -r branch; do
+      name=$(echo "$branch" | sed -e "s#/#_#g" -e "s#\.\.#_#g")
+      mkdir -p "$name"
+      (
+        cd "$name"
+        touch latest
+        (
+          cd "$gitrepo" >&2
+          git show -s --format="%H %at" "$remote/$branch"
+        ) >latest.next
+        touch latest-v2
+        (
+          cd "$gitrepo" >&2
+          git show -s --format="%H %at $(date '+%s')" "$remote/$branch"
+        ) >latest-v2.next
+        touch latest-url
+        (
+          url=$(curl -w '%{redirect_url}' "https://nixos.org/channels/$branch" -o /dev/null)
+          echo "$url $(date '+%s')"
+        ) >latest-url.next
+
+        if [ "$(cut -d' ' -f1 latest-url.next | md5sum)" != "$(cut -d' ' -f1 latest-url | md5sum)" ]; then
+          dbg "Change in ${branch} URL"
+          mv latest-url.next latest-url
+          chmod a+r latest-url
+          touch history-url
+          (
+            cat history-url
+            cat latest-url
+          ) | tail -n100000 >history-url.next
+          mv history-url.next history-url
+          chmod a+r history-url
+        fi
+
+        if [ "$(md5sum <latest.next)" != "$(md5sum <latest)" ]; then
+          dbg "Change in ${branch}"
+          (
+            cd "$gitrepo" >&2
+            echo -n "Channel $branch advanced to "
+            git show -s --format="https://github.com/NixOS/nixpkgs/commit/%h (from %cr, history: $URL/$name)" "$remote/$branch"
+          ) | publish
+          mv latest.next latest
+          chmod a+r latest
+          touch history
+          (
+            cat history
+            cat latest
+          ) | tail -n100000 >history.next
+          mv history.next history
+          chmod a+r history
+
+          # Note: latest-v2 doesn't do a hash check b/c
+          # its hash always changes due to the date.
+          mv latest-v2.next latest-v2
+          chmod a+r latest-v2
+          touch history-v2
+          (
+            cat history-v2
+            cat latest-v2
+          ) | tail -n100000 >history-v2.next
+          mv history-v2.next history-v2
+          chmod a+r history-v2
+        fi
+
+        rm -f latest.next latest-v2.next latest-url.next
+
+        cat <<EOF >README.txt
+                    This service is provided for free.
+
+                    If you use this service automatically please be
+                    polite and follow some rules:
+
+                      - please don't poll any more often than every 15
+                        minutes, to reduce the traffic to my server.
+
+                      - please don't poll exactly on a 5 minute
+                        increment, to avoid the "thundering herd"
+                        problem.
+
+                      - please add a delay on your scheduled polling
+                        script for a random delay between 1 and 59
+                        seconds, to further spread out  the load.
+
+                      - please consider using my webhooks instead:
+                        email me at graham at grahamc dot com or
+                        message gchristensen on #nixos on Freenode.
+
+
+                    FILE NOTES
+
+                      Each format comes with two files, a "latest" file
+                      and a "history" file.
+
+                      The history files will retain 100000 lines of history.
+
+
+
+                    FORMAT NOTES
+
+                        latest, history:
+                          commit-hash date-of-commit
+
+                        latest-v2, history-v2:
+                          commit-hash date-of-commit date-of-advancement
+
+                        latest-url, history-url:
+                          channel-url date-of-advancement
+
+                      Note: "date-of-advancement" is actually the date
+                      the advancement was _detected_, and can be
+                      wildly wrong for no longer updated channels. For
+                      example, the nixos-13.10 channel's
+                      date-of-advancement is quite recent despite the
+                      channel not having updated in many years.
+
+                      All three formats will continue to be updated.
+
+                    Thank you, good luck, have fun
+                    Graham
+EOF
+      )
+    done
+
+    make_graph >graph.html
+  )
+# gnuplot <<< "set term svg; set output 'channel.svg'; set title 'Channel updates'; set timefmt '%s'; set format x '%m-%d'; set xdata time; plot 0, 'channel' using 1:(\$2-\$1)/3600 with linespoints title 'nixos-whatever';"
