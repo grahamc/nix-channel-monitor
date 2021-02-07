@@ -12,7 +12,7 @@ publish() {
   curl -v \
     -H "content-type:application/json" \
     -XPOST \
-    AMQPAPI/api/exchanges/ircbot/amq.default/publish \
+    "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
     --data @- <<-EOF
 {
     "properties": {},
@@ -24,7 +24,7 @@ EOF
   curl -v \
     -H "content-type:application/json" \
     -XPOST \
-    AMQPAPI/api/exchanges/ircbot/amq.default/publish \
+    "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
     --data @- <<-EOF
 {
     "properties": {},
