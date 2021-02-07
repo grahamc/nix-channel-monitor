@@ -29,6 +29,7 @@ pkgs.resholvePackage {
       git
       gnugrep
       gnused
+      jq
       telnet
     ];
   };

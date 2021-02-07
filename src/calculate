@@ -9,31 +9,37 @@ dbg() {
 
 publish() {
   msg=$(cat | head -n1)
-  curl -v \
-    -H "content-type:application/json" \
-    -XPOST \
-    "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
-    --data @- <<-EOF
-{
-    "properties": {},
-    "routing_key": "queue-publish",
-    "payload_encoding": "string",
-    "payload": "{\"target\": \"#nixos\", \"body\": \"$msg\", \"message_type\": \"notice\"}"
-}
-EOF
-  curl -v \
-    -H "content-type:application/json" \
-    -XPOST \
-    "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
-    --data @- <<-EOF
-{
-    "properties": {},
-    "routing_key": "queue-publish",
-    "payload_encoding": "string",
-    "payload": "{\"target\": \"#nixos-bots\", \"body\": \"$msg\", \"message_type\": \"notice\"}"
-}
-EOF
+  jq -c -n '$ARGS.named' \
+    --argjson properties '{}' \
+    --arg routing_key "queue-publish" \
+    --arg payload_encoding "string" \
+    --arg payload "$(
+      jq -c -n '$ARGS.named' \
+        --arg target "#nixos" \
+        --arg body "$msg" \
+        --arg message_type "notice"
+    )" |
+    curl -v \
+      -H "content-type:application/json" \
+      -XPOST \
+      "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
+      --data @-
 
+  jq -c -n '$ARGS.named' \
+    --argjson properties '{}' \
+    --arg routing_key "queue-publish" \
+    --arg payload_encoding "string" \
+    --arg payload "$(
+      jq -c -n '$ARGS.named' \
+        --arg target "#nixos-bots" \
+        --arg body "$msg" \
+        --arg message_type "notice"
+    )" |
+    curl -v \
+      -H "content-type:application/json" \
+      -XPOST \
+      "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
+      --data @-
 }
 
 filter_recent_timestamps() {
