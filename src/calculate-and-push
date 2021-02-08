@@ -11,7 +11,7 @@ gitcache="$HOME/.cache/git-cache"
   fi
 
   cd nixpkgs || exit 1
-  git -C ./nixpkgs remote set-url origin "$remote"
+  git remote set-url origin "$remote"
   git gc
   git fetch "origin"
 )
