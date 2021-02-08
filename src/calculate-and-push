@@ -2,11 +2,23 @@
 
 set - eux
 remote=https://github.com/nixos/nixpkgs.git
-if [ ! -d ./nixpkgs ]; then
-  git clone "$remote" ./nixpkgs
-fi
+gitcache="$HOME/.cache/git-cache"
+(
+  mkdir -p "$gitcache"
+  cd "$gitcache" || exit 1
+  if [ ! -d ./nixpkgs ]; then
+    git clone "$remote" ./nixpkgs
+  fi
 
-git -C ./nixpkgs remote set-url origin "$remote"
+  cd nixpkgs || exit 1
+  git -C ./nixpkgs remote set-url origin "$remote"
+  git gc
+  git fetch "origin"
+)
+
+if [ ! -d ./nixpkgs ]; then
+  git clone "$gitcache/nixpkgs" -- "$remote" ./nixpkgs
+fi
 
 calculate "$PWD/nixpkgs" "./data"
 
