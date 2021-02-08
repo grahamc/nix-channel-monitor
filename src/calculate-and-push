@@ -14,5 +14,5 @@ git add ./data
 
 if ! git diff --cached --exit-code; then
   git commit -m "Automatic channel data update."
-  git push vaultpus HEAD:"$BUILDKITE_BRANCH"
+  git push vaultpush HEAD:"$BUILDKITE_BRANCH"
 fi
