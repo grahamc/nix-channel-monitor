@@ -9,15 +9,17 @@ pkgs.resholvePackage {
   preBuild = ''
     shellcheck ./calculate
     shellcheck ./calculate-and-push
+    shellcheck ./make-index
   '';
   nativeBuildInputs = [ pkgs.shellcheck ];
   installPhase = ''
     install -Dv calculate $out/bin/calculate
     install -Dv calculate-and-push $out/bin/calculate-and-push
+    install -Dv make-index $out/bin/make-index
   '';
 
   solutions.calculate = {
-    scripts = [ "bin/calculate" "bin/calculate-and-push" ];
+    scripts = [ "bin/calculate" "bin/calculate-and-push" "bin/make-index" ];
     interpreter = "${pkgs.oil}/bin/osh";
 
     inputs = with pkgs; [
@@ -30,7 +32,7 @@ pkgs.resholvePackage {
       gnugrep
       gnused
       jq
-      telnet
+      recode
     ];
   };
 }

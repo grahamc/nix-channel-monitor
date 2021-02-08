@@ -22,6 +22,8 @@ fi
 
 calculate "$PWD/nixpkgs" "./data"
 
+make-index ./data
+
 git add ./data
 
 if ! git diff --cached --exit-code; then
