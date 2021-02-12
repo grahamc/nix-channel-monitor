@@ -24,6 +24,7 @@ pkgs.resholvePackage {
 
     inputs = with pkgs; [
       (placeholder "out")
+      awscli2
       coreutils
       curl
       findutils

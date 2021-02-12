@@ -30,3 +30,6 @@ if ! git diff --cached --exit-code; then
   git commit -m "Automatic channel data update."
   git push vaultpush HEAD:"$BUILDKITE_BRANCH"
 fi
+
+aws s3 sync ./data/ s3://channels.nix.gsc.io20210208030937774500000002 --delete --exclude '*.html' --no-guess-mime-type --content-type text/plain
+aws s3 sync ./data/ s3://channels.nix.gsc.io20210208030937774500000002 --delete --exclude '*' --include '*.html' --no-guess-mime-type --content-type text/html
