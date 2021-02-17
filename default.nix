@@ -1,17 +1,26 @@
 let
   pkgs = import (builtins.fetchTarball "channel:nixos-unstable-small") {};
+
+  perl = pkgs.perl.withPackages (ps: with ps; [ JSON DateTime ]);
 in
 pkgs.resholvePackage {
   pname = "nix-channel-monitor";
   version = "0.0.0";
 
   src = ./src;
+
   preBuild = ''
     shellcheck ./calculate
     shellcheck ./calculate-and-push
     shellcheck ./make-index
   '';
-  nativeBuildInputs = [ pkgs.shellcheck ];
+
+  buildPhase = ''
+    patchShebangs .
+  '';
+
+  nativeBuildInputs = [ pkgs.shellcheck perl ];
+
   installPhase = ''
     install -Dv calculate $out/bin/calculate
     install -Dv calculate-and-push $out/bin/calculate-and-push
@@ -19,7 +28,7 @@ pkgs.resholvePackage {
   '';
 
   solutions.calculate = {
-    scripts = [ "bin/calculate" "bin/calculate-and-push" "bin/make-index" ];
+    scripts = [ "bin/calculate" "bin/calculate-and-push" ];
     interpreter = "${pkgs.oil}/bin/osh";
 
     inputs = with pkgs; [
