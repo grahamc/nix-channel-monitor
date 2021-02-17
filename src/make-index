@@ -6,6 +6,7 @@ use 5.032;
 use autodie;
 
 use DateTime;
+use HTML::Tidy;
 use JSON qw(to_json);
 
 use constant TZ => DateTime::TimeZone->new(name => 'UTC');
@@ -195,8 +196,10 @@ my $body = h('body',
   h('script', { src => 'script.js' }),
 );
 
+my $html_content = h('html', $head, $body)->$*;
+
 open my $index_html, '>', "$base_dir/index.html";
-print { $index_html } "<!DOCTYPE html>\n", h('html', $head, $body)->$*;
+print { $index_html } HTML::Tidy->new()->clean("<!DOCTYPE html>\n", $html_content);
 
 # Get releases with recent updates and prep them for graphing (see data/script.js)
 my @graphed_releases =
