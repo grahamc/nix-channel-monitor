@@ -7,7 +7,7 @@ use autodie;
 
 use DateTime;
 use HTML::Tidy;
-use JSON qw(to_json);
+use JSON;
 
 use constant TZ => DateTime::TimeZone->new(name => 'UTC');
 use constant SINCE => DateTime->now(time_zone => TZ)->subtract(months => 3);
@@ -207,7 +207,14 @@ my @graphed_releases =
   grep $_->{history}->@* > 0,
   map $releases{$_}->@*, @release_names;
 
-my $json = to_json \@graphed_releases;
+# Create a formatted JSON object with sorted object keys (ensures less noisy diffs)
+my $json = JSON->new
+  ->pretty
+  ->canonical
+  ->encode(\@graphed_releases);
+
+# Remove the last newline since we'll be using a semicolon (which is safer)
+chomp($json);
 
 open my $data_js, '>', "$base_dir/data.js";
 print { $data_js } <<JS;
