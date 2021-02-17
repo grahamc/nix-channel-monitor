@@ -1,7 +1,7 @@
 let
   pkgs = import (builtins.fetchTarball "channel:nixos-unstable-small") {};
 
-  perl = pkgs.perl.withPackages (ps: with ps; [ JSON DateTime ]);
+  perl = pkgs.perl.withPackages (ps: with ps; [ JSON DateTime HTMLTidy ]);
 in
 pkgs.resholvePackage {
   pname = "nix-channel-monitor";
