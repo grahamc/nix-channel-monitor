@@ -8,7 +8,7 @@ use autodie;
 use DateTime;
 use JSON qw(to_json);
 
-use constant TZ => DateTime::TimeZone->new(name => 'local');
+use constant TZ => DateTime::TimeZone->new(name => 'UTC');
 use constant SINCE => DateTime->now(time_zone => TZ)->subtract(months => 3);
 
 die "USAGE: $0 DIRECTORY\n" unless @ARGV;
@@ -48,7 +48,7 @@ sub get_releases :prototype() {
       my $timestamp = DateTime->from_epoch(epoch => $epoch, time_zone => TZ);
 
       if ($timestamp >= SINCE) {
-        push @history, [$commit, $timestamp->stringify];
+        push @history, [$commit, $timestamp->stringify . 'Z'];
       }
     }
 
