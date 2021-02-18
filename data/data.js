@@ -1626,10 +1626,6 @@ const graphData = [
    {
       "history" : [
          [
-            "2f437c733834597b69b82caf8f5af63e7817cad9",
-            "2020-11-18T03:35:21Z"
-         ],
-         [
             "1e3b3f0a7581d12f99db3ca9a2efe1c52ea0a2e7",
             "2020-11-18T08:30:32Z"
          ],
@@ -3497,10 +3493,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "f05c380a51daee53ac2edb0bac2fd5f1774e977a",
-            "2020-11-18T03:40:23Z"
-         ],
          [
             "d488daf8504ef1838c6b89f7add9bf370757afe4",
             "2020-11-20T06:40:48Z"
