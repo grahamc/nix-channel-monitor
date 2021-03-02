@@ -127,7 +127,7 @@ sub h :prototype($@) {
   }
 
   my $html = "<$tag";
-  for my $attr (keys %attrs) {
+  for my $attr (sort keys %attrs) {
     my $value = escape $attrs{$attr};
 
     $html .= qq{ $attr="$value"};
