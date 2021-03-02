@@ -30,37 +30,37 @@ git add ./data
 if ! git diff --cached --exit-code; then
   git commit -m "Automatic channel data update."
   git push vaultpush HEAD:"$BUILDKITE_BRANCH"
-fi
 
-# [extension] => MIME type
-declare -A content_types=(
-  [html]=text/html
-  [css]=text/css
-  [js]=application/javascript
-)
+  # [extension] => MIME type
+  declare -A content_types=(
+    [html]=text/html
+    [css]=text/css
+    [js]=application/javascript
+  )
 
-# Excludes for sync of text/plain files, built from extensions whose MIME types aren't
-# text/plain
-declare -a excludes=()
-for extension in "${!content_types[@]}"; do
-  excludes+=(--exclude "*.$extension")
-done
+  # Excludes for sync of text/plain files, built from extensions whose MIME types aren't
+  # text/plain
+  declare -a excludes=()
+  for extension in "${!content_types[@]}"; do
+    excludes+=(--exclude "*.$extension")
+  done
 
-# Sync text/plain files first
-aws s3 sync ./data/ s3://channels.nix.gsc.io20210208030937774500000002 \
-  --delete \
-  "${excludes[@]}" \
-  --no-guess-mime-type \
-  --content-type text/plain
-
-# Sync other files next
-for extension in "${!content_types[@]}"; do
-  mime_type="${content_types[$extension]}"
-
+  # Sync text/plain files first
   aws s3 sync ./data/ s3://channels.nix.gsc.io20210208030937774500000002 \
     --delete \
-    --exclude '*' \
-    --include "*.$extension" \
+    "${excludes[@]}" \
     --no-guess-mime-type \
-    --content-type "$mime_type"
-done
+    --content-type text/plain
+
+  # Sync other files next
+  for extension in "${!content_types[@]}"; do
+    mime_type="${content_types[$extension]}"
+
+    aws s3 sync ./data/ s3://channels.nix.gsc.io20210208030937774500000002 \
+      --delete \
+      --exclude '*' \
+      --include "*.$extension" \
+      --no-guess-mime-type \
+      --content-type "$mime_type"
+  done
+fi
