@@ -8,38 +8,22 @@ dbg() {
 }
 
 publish() {
-  msg=$(cat | head -n1)
-  jq -c -n '$ARGS.named' \
-    --argjson properties '{}' \
-    --arg routing_key "queue-publish" \
-    --arg payload_encoding "string" \
-    --arg payload "$(
-      jq -c -n '$ARGS.named' \
-        --arg target "#nixos" \
-        --arg body "$msg" \
-        --arg message_type "notice"
-    )" |
-    curl -v \
-      -H "content-type:application/json" \
-      -XPOST \
-      "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
-      --data @-
+  msgplain=$(cat | head -n1)
+  msgformatted=$(cat | head -n1)
 
+  # Ensure that the bot is in the room.
+  curl -s -X POST \
+    "$SERVER/_matrix/client/r0/join/$ROOM_ID?access_token=$TOKEN" > /dev/null
+
+  # Send the message to the room
   jq -c -n '$ARGS.named' \
-    --argjson properties '{}' \
-    --arg routing_key "queue-publish" \
-    --arg payload_encoding "string" \
-    --arg payload "$(
-      jq -c -n '$ARGS.named' \
-        --arg target "#nixos-bots" \
-        --arg body "$msg" \
-        --arg message_type "notice"
-    )" |
-    curl -v \
-      -H "content-type:application/json" \
-      -XPOST \
-      "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
-      --data @-
+    --arg msgtype         'm.notice' \
+    --arg body            "$msgplain" \
+    --arg format          'org.matrix.custom.html' \
+    --arg formatted_body  "$msgformatted" \
+    | curl -s -X PUT \
+      "$SERVER/_matrix/client/r0/rooms/$ROOM_ID/send/m.room.message/`date +%s`?access_token=$TOKEN" \
+      --data @- > /dev/null
 }
 
 filter_recent_timestamps() {
@@ -157,8 +141,15 @@ readonly dest="$2"
           dbg "Change in ${branch}"
           (
             cd "$gitrepo" >&2
+
+            # Unformatted version
             printf "Channel %s advanced to " "$branch"
             git show -s --format="https://github.com/NixOS/nixpkgs/commit/%h (from %cr, history: $URL/$name)" "$remote/$branch"
+            printf "\n"
+
+            # Formatted version (with hyperlinks)
+            printf "Channel %s advanced to " "$branch"
+            git show -s --format="<a href=https://github.com/NixOS/nixpkgs/commit/%h>%h</a> (from %cr, <a href=$URL/$name>history</a>)" "$remote/$branch"
           ) | publish
           mv latest.next latest
           chmod a+r latest
