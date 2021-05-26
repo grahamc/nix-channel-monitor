@@ -8,6 +8,7 @@ dbg() {
 }
 
 publish() {
+  set -x
   msgplain=$(cat | head -n1)
   msgformatted=$(cat | head -n1)
 
@@ -143,13 +144,10 @@ readonly dest="$2"
             cd "$gitrepo" >&2
 
             # Unformatted version
-            printf "Channel %s advanced to " "$branch"
-            git show -s --format="https://github.com/NixOS/nixpkgs/commit/%h (from %cr, history: $URL/$name/history)" "$remote/$branch"
+            git show -s --format="Channel $branch advanced to https://github.com/NixOS/nixpkgs/commit/%h (from %cr, history: $URL/$name/history)" "$remote/$branch"
             printf "\n"
-
             # Formatted version (with hyperlinks)
-            printf "Channel %s advanced to " "$branch"
-            git show -s --format="<a href=https://github.com/NixOS/nixpkgs/commit/%h>%h</a> (from %cr, <a href=$URL/$name/history>history</a>)" "$remote/$branch"
+            git show -s --format="Channel $branch advanced to <a href=https://github.com/NixOS/nixpkgs/commit/%h>%h</a> (from %cr, <a href=$URL/$name/history>history</a>)" "$remote/$branch"
           ) | publish
           mv latest.next latest
           chmod a+r latest
