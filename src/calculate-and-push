@@ -21,7 +21,7 @@ if [ ! -d ./nixpkgs ]; then
   git clone --reference "$gitcache/nixpkgs" -- "$remote" ./nixpkgs
 fi
 
-calculate "$PWD/nixpkgs" "./data"
+calculate.py "$PWD/nixpkgs" "./data"
 
 make-index ./data
 
