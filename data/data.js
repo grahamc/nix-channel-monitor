@@ -1278,6 +1278,24 @@ const graphData = [
    {
       "history" : [
          [
+            "ab98a6e1091b9714303fb22e33a9e05bd7bab281",
+            "2021-05-31T23:31:57Z"
+         ]
+      ],
+      "name" : "nixos-21.05-small"
+   },
+   {
+      "history" : [
+         [
+            "6029acc019995d844ca523a86896015cd4cfce49",
+            "2021-05-31T23:32:00Z"
+         ]
+      ],
+      "name" : "nixpkgs-21.05-darwin"
+   },
+   {
+      "history" : [
+         [
             "df8e3bd110921621d175fad88c9e67909b7cb3d3",
             "2021-03-01T12:01:07Z"
          ],

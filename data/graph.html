@@ -760,6 +760,16 @@ point: {events: { click: function() { window.open("https://github.com/NixOS/nixp
 data: [
     ["07ca3a021f05d6ff46bbd03c418b418abb781279", 1622503301000, 39],
 ]},
+{name: 'nixos-21.05-small', type: 'scatter', keys: ['commit', 'x', 'y'],
+point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},
+data: [
+    ["ab98a6e1091b9714303fb22e33a9e05bd7bab281", 1622503917000, 40],
+]},
+{name: 'nixpkgs-21.05-darwin', type: 'scatter', keys: ['commit', 'x', 'y'],
+point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},
+data: [
+    ["6029acc019995d844ca523a86896015cd4cfce49", 1622503920000, 41],
+]},
   ]
 });
   </script>
