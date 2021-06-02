@@ -183,14 +183,6 @@ const graphData = [
    {
       "history" : [
          [
-            "da69061d077a07ccffdf1ec10a95a5e77aff3478",
-            "2021-03-02T06:11:12Z"
-         ],
-         [
-            "d12574353329291e661805312544b1c68c13911e",
-            "2021-03-02T16:41:16Z"
-         ],
-         [
             "e061350a361df9667490c5914fb72a58dd927bca",
             "2021-03-03T16:21:15Z"
          ],
@@ -717,6 +709,10 @@ const graphData = [
          [
             "bfdf04bd21bb99b05bb10f0de8876ad4baca48e4",
             "2021-05-30T13:21:41Z"
+         ],
+         [
+            "239da47116274ee326a965d80b3ed1d3bf08af62",
+            "2021-06-02T18:13:33Z"
          ]
       ],
       "name" : "nixos-unstable-small"
@@ -1259,6 +1255,10 @@ const graphData = [
          [
             "d25ea6a0d2a847fb52131da546f2a866656fbafa",
             "2021-06-01T09:11:41Z"
+         ],
+         [
+            "5237039cc1e7633a7697ed7999afd1f80d91ff14",
+            "2021-06-02T18:13:31Z"
          ]
       ],
       "name" : "nixos-21.05"
@@ -1292,6 +1292,10 @@ const graphData = [
          [
             "5237039cc1e7633a7697ed7999afd1f80d91ff14",
             "2021-06-01T23:11:47Z"
+         ],
+         [
+            "bb8a5e54845012ed1375ffd5f317d2fdf434b20e",
+            "2021-06-02T18:13:32Z"
          ]
       ],
       "name" : "nixos-21.05-small"
@@ -1301,6 +1305,10 @@ const graphData = [
          [
             "6029acc019995d844ca523a86896015cd4cfce49",
             "2021-05-31T23:32:00Z"
+         ],
+         [
+            "9588f49304cf10c9adbcecc8a6b2d46c0c2e08b4",
+            "2021-06-02T18:13:35Z"
          ]
       ],
       "name" : "nixpkgs-21.05-darwin"
@@ -1704,10 +1712,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "8d82c865b416354a43cb30bd1945c3bbda27850d",
-            "2021-03-02T15:41:02Z"
-         ],
          [
             "b84d86117f7e491ab3a04d898c66d73256ac6f18",
             "2021-03-02T22:51:43Z"
@@ -2418,10 +2422,6 @@ const graphData = [
    {
       "history" : [
          [
-            "8d82c865b416354a43cb30bd1945c3bbda27850d",
-            "2021-03-02T13:32:10Z"
-         ],
-         [
             "b84d86117f7e491ab3a04d898c66d73256ac6f18",
             "2021-03-02T19:11:41Z"
          ],
@@ -2924,6 +2924,10 @@ const graphData = [
          [
             "eae0cabc124702e04bb2098070ca46d661543d29",
             "2021-05-30T17:01:42Z"
+         ],
+         [
+            "cee3ca37c68dad981396365bf4b1d0c807ac4eb4",
+            "2021-06-02T18:13:34Z"
          ]
       ],
       "name" : "nixpkgs-20.09-darwin"
