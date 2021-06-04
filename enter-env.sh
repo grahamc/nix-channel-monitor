@@ -17,12 +17,12 @@ function finish() {
 }
 trap finish EXIT
 
-echo "--> Assuming role: nix-channel-monitor-runner" >&2
+echo "--> Assuming role: nix-channel-monitor" >&2
 vault_creds=$(
   vault token create \
     -display-name=nix-channel-monitor \
     -format=json \
-    -role nix-channel-monitor-runner
+    -role nix-channel-monitor
 )
 
 VAULT_EXIT_ACCESSOR=$(jq -r .auth.accessor <<<"$vault_creds")
