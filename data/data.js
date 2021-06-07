@@ -1290,6 +1290,10 @@ const graphData = [
          [
             "41387135ddb01d84049d1931292cacabbde54a34",
             "2021-06-07T19:31:48Z"
+         ],
+         [
+            "12e7af1cfb3ab5bbbbd1d213a0b17c11ce9d3f2f",
+            "2021-06-07T23:11:43Z"
          ]
       ],
       "name" : "nixpkgs-unstable"
