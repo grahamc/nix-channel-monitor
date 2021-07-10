@@ -158,7 +158,7 @@ readonly dest="$2"
           (
             cd "$gitrepo" >&2
             printf "Channel %s advanced to " "$branch"
-            git show -s --format="https://github.com/NixOS/nixpkgs/commit/%h (from %cr, history: $URL/$name)" "$remote/$branch"
+            git show -s --format="https://github.com/NixOS/nixpkgs/commit/%h (from %cr, history: $URL/$name/history)" "$remote/$branch"
           ) | publish
           mv latest.next latest
           chmod a+r latest
