@@ -211,10 +211,6 @@ const graphData = [
    {
       "history" : [
          [
-            "ebcf1f92fe26b6589b1438b2c92dd1c71a67a088",
-            "2021-04-17T20:41:16Z"
-         ],
-         [
             "38cef0ba3b4c215cf1d4d03d137c66d948bdf1be",
             "2021-04-18T11:21:15Z"
          ],
@@ -723,10 +719,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "f0efbe21f9ae1e17d1aca922708f1bdef605039d",
-            "2021-04-17T20:41:18Z"
-         ],
          [
             "7919518f0235106d050c77837df5e338fb94de5d",
             "2021-04-19T14:41:10Z"
@@ -3001,10 +2993,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "52c0ba2d861a3ee1a85faf3a0e57bba73f367ac0",
-            "2021-04-17T20:41:18Z"
-         ],
          [
             "ddffe08acde6835e21041bf7b0276c771fb615b1",
             "2021-04-19T04:21:21Z"
