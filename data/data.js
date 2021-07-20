@@ -207,10 +207,6 @@ const graphData = [
    {
       "history" : [
          [
-            "b26886474a32426684596700ec833dd1a610215e",
-            "2021-04-19T23:52:03Z"
-         ],
-         [
             "e70b485cdbdfce5dac6aa9ebb0cee611945bfeaf",
             "2021-04-20T08:41:19Z"
          ],
@@ -1294,6 +1290,10 @@ const graphData = [
          [
             "58128d690dce9e88936be24c314b0f66875550a7",
             "2021-07-19T21:11:26Z"
+         ],
+         [
+            "4331afb9461ed13de9c8ddbfd5dc0eaa799cb8a2",
+            "2021-07-20T00:01:30Z"
          ]
       ],
       "name" : "nixpkgs-unstable"
@@ -3005,10 +3005,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "9a1672105db0eebe8ef59f310397435f2d0298d0",
-            "2021-04-20T00:01:06Z"
-         ],
          [
             "d6f95aa4b55c0a84eb55ad55b3964085d129d44c",
             "2021-04-20T08:41:20Z"
