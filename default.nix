@@ -20,21 +20,23 @@ pkgs.resholvePackage {
     patchShebangs .
   '';
 
-  nativeBuildInputs = [ pkgs.shellcheck perl pkgs.vault ];
+  nativeBuildInputs = [ pkgs.shellcheck perl ];
 
   installPhase = ''
     install -Dv calculate $out/bin/calculate
     install -Dv calculate-and-push $out/bin/calculate-and-push
+    install -Dv enter-env.sh $out/bin/enter-env.sh
     install -Dv make-index $out/bin/make-index
   '';
 
   solutions.calculate = {
-    scripts = [ "bin/calculate" "bin/calculate-and-push" ];
+    scripts = [ "bin/calculate" "bin/calculate-and-push" "bin/enter-env.sh" ];
     interpreter = "${pkgs.oil}/bin/osh";
 
     inputs = with pkgs; [
       (placeholder "out")
       awscli2
+      bash
       coreutils
       curl
       findutils
@@ -44,6 +46,7 @@ pkgs.resholvePackage {
       gnused
       jq
       recode
+      vault
     ];
   };
 }
