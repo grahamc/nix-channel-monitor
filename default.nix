@@ -1,6 +1,6 @@
 let
   # Temporarily pin Nixpkgs: https://github.com/NixOS/nixpkgs/pull/126993#issuecomment-884192962
-  pkgs = import (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/2828164c23a445a7056c6e5ea21274e7b77dcac8.tar.gz") { };
+  pkgs = import (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/aab3c48aef2260867272bf6797a980e32ccedbe0.tar.gz") { };
 
   perl = pkgs.perl.withPackages (ps: with ps; [ JSON DateTime HTMLTidy ]);
 in
