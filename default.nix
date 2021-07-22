@@ -20,7 +20,7 @@ pkgs.resholvePackage {
     patchShebangs .
   '';
 
-  nativeBuildInputs = [ pkgs.shellcheck perl ];
+  nativeBuildInputs = [ pkgs.shellcheck perl pkgs.vault ];
 
   installPhase = ''
     install -Dv calculate $out/bin/calculate

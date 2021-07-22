@@ -1,5 +1,5 @@
 #!/usr/bin/env nix-shell
-#!nix-shell -i bash -p jq vault awscli2 -I nixpkgs=channel:nixos-unstable-small
+#!nix-shell -i bash ./default.nix
 
 set +x # don't leak secrets!
 set -eu
