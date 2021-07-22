@@ -697,6 +697,10 @@ const graphData = [
          [
             "314cf1949b181a1362b96c2e0421f9710a8fe607",
             "2021-07-22T15:04:17Z"
+         ],
+         [
+            "f102bcee7d1f3f607ad502dfe346f4d4066e534a",
+            "2021-07-22T22:22:45Z"
          ]
       ],
       "name" : "nixos-unstable-small"
@@ -2293,6 +2297,10 @@ const graphData = [
          [
             "677b13b2c545ccfee579c020bf6a8fb595463524",
             "2021-07-22T15:04:19Z"
+         ],
+         [
+            "e4f95387e264fc8550161041312261e1d956f8b9",
+            "2021-07-22T22:22:46Z"
          ]
       ],
       "name" : "nixpkgs-21.05-darwin"
