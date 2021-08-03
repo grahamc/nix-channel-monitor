@@ -3022,10 +3022,6 @@ const graphData = [
    {
       "history" : [
          [
-            "4a154d476238163eda54475d02382394b202961a",
-            "2021-05-03T19:03:30Z"
-         ],
-         [
             "a565a2165ab6e195d7c105a8416b8f4b4d0349a4",
             "2021-05-03T23:53:35Z"
          ],
@@ -3300,15 +3296,6 @@ const graphData = [
          ]
       ],
       "name" : "nixos-20.03"
-   },
-   {
-      "history" : [
-         [
-            "1db42b7fe3878f3f5f7a4f2dc210772fd080e205",
-            "2021-05-03T19:01:50Z"
-         ]
-      ],
-      "name" : "nixos-20.03-small"
    }
 ];
 for (const channel of graphData) {
