@@ -3309,15 +3309,6 @@ const graphData = [
          ]
       ],
       "name" : "nixos-20.03-small"
-   },
-   {
-      "history" : [
-         [
-            "1db42b7fe3878f3f5f7a4f2dc210772fd080e205",
-            "2021-05-03T17:11:45Z"
-         ]
-      ],
-      "name" : "nixpkgs-20.03-darwin"
    }
 ];
 for (const channel of graphData) {
