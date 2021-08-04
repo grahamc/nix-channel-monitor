@@ -203,10 +203,6 @@ const graphData = [
    {
       "history" : [
          [
-            "e5b86d7ac08c3c33a4bfd9736a6001a7c63d0a1a",
-            "2021-05-03T23:51:55Z"
-         ],
-         [
             "93c5837be5952bf17d21636a6d0684f094e0e6a8",
             "2021-05-04T11:31:37Z"
          ],
@@ -3026,10 +3022,6 @@ const graphData = [
    {
       "history" : [
          [
-            "a565a2165ab6e195d7c105a8416b8f4b4d0349a4",
-            "2021-05-03T23:53:35Z"
-         ],
-         [
             "2ee9a4fb97d8028771bbb34253412c88b03645b7",
             "2021-05-04T15:21:42Z"
          ],
@@ -3291,15 +3283,6 @@ const graphData = [
          ]
       ],
       "name" : "nixpkgs-20.09-darwin"
-   },
-   {
-      "history" : [
-         [
-            "1db42b7fe3878f3f5f7a4f2dc210772fd080e205",
-            "2021-05-03T23:51:53Z"
-         ]
-      ],
-      "name" : "nixos-20.03"
    }
 ];
 for (const channel of graphData) {
