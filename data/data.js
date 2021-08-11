@@ -2212,6 +2212,10 @@ const graphData = [
          [
             "f6551e1efa261568c82b76c3a582b2c2ceb1f53f",
             "2021-08-11T16:31:27Z"
+         ],
+         [
+            "927ce1afc1db40869a463a37ea2738c27d425f80",
+            "2021-08-11T18:41:22Z"
          ]
       ],
       "name" : "nixos-21.05-small"
@@ -2703,10 +2707,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "6e83cfb005c6281ab10e908f6386fe1499b67feb",
-            "2021-05-11T18:41:33Z"
-         ],
          [
             "f34eb300b68ea66ef8a2dbc5eec3c86a8270e414",
             "2021-05-12T07:11:45Z"
