@@ -1366,10 +1366,6 @@ const graphData = [
    {
       "history" : [
          [
-            "93963c27b934f24289a94b9e3784d60a9b77e92c",
-            "2021-06-14T00:41:16Z"
-         ],
-         [
             "8db24dec5368ef35657bbca14f0a3baaeefb0f88",
             "2021-06-15T10:51:22Z"
          ],
