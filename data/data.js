@@ -2,10 +2,6 @@ const graphData = [
    {
       "history" : [
          [
-            "7e567a3d092b7de69cdf5deaeb8d9526de230916",
-            "2021-06-22T15:02:26Z"
-         ],
-         [
             "d2b489b24ae30278ad31e06801c3853b0edbbd9d",
             "2021-06-24T03:01:18Z"
          ],
@@ -727,10 +723,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "b1da480910cfd8870cdc0896b3a422c513be05c1",
-            "2021-06-22T15:03:54Z"
-         ],
          [
             "b27eaa18b47b77fbbf9f3bd7a17046b2d64b637b",
             "2021-06-22T21:01:20Z"
@@ -2733,6 +2725,10 @@ const graphData = [
          [
             "12f3f58f48d4a610d8c4eb9feacbf13fc50c779d",
             "2021-09-22T03:11:47Z"
+         ],
+         [
+            "e42f91e090e292e1d1ae9803c072376b4e28aae0",
+            "2021-09-22T15:11:50Z"
          ]
       ],
       "name" : "nixpkgs-21.05-darwin"
