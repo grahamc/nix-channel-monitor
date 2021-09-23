@@ -1370,10 +1370,6 @@ const graphData = [
    {
       "history" : [
          [
-            "2f752379bcc26134d12f2275435f0530593ea5c6",
-            "2021-06-23T18:31:44Z"
-         ],
-         [
             "e4fe40fc56e5b4622c375a9aaac19b4b8138563b",
             "2021-06-24T00:03:05Z"
          ],
@@ -2196,6 +2192,10 @@ const graphData = [
          [
             "2091b11642381b3056fb47e6c9fe25b25d1f388b",
             "2021-09-23T11:51:43Z"
+         ],
+         [
+            "1afcc8f84347ce9c1d73cd9cd6d19df49b6e3d00",
+            "2021-09-23T18:31:58Z"
          ]
       ],
       "name" : "nixos-21.05-small"
@@ -2795,6 +2795,10 @@ const graphData = [
          [
             "751ad2b52f505cfd6dae257bfaac4d3a2bd25160",
             "2021-09-23T08:31:54Z"
+         ],
+         [
+            "a13824fe5e38187fbc75cd598b5c06bdcc13501f",
+            "2021-09-23T18:31:57Z"
          ]
       ],
       "name" : "nixos-20.09-small"
