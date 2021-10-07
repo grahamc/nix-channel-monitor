@@ -2160,16 +2160,16 @@ const graphData = [
          [
             "49017a1c5ac37461144d3b2a6efab02b87bdf066",
             "2021-10-07T03:21:56Z"
+         ],
+         [
+            "ab54145047cc1ed52d6852c8d8bad017fd5b7dbe",
+            "2021-10-07T16:32:12Z"
          ]
       ],
       "name" : "nixos-21.05-small"
    },
    {
       "history" : [
-         [
-            "bd095512480187bac60bf7c1f6c25c8c56ba3f3b",
-            "2021-07-07T16:31:39Z"
-         ],
          [
             "977b522d3101ad847fd51d695b817fe2cf8efaf6",
             "2021-07-08T01:51:35Z"
