@@ -2016,6 +2016,10 @@ const graphData = [
          [
             "55e93ae9eb9a26c3fd2505b3c33b42abb43f2e6d",
             "2021-10-21T02:41:33Z"
+         ],
+         [
+            "b0274abf85097e9a2da868b28a5532918dc14380",
+            "2021-10-22T10:21:35Z"
          ]
       ],
       "name" : "nixos-21.05-small"
