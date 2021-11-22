@@ -1162,6 +1162,15 @@ const graphData = [
    {
       "history" : [
          [
+            "a2e86da944f019807df62eccf9dcb778a330e8ce",
+            "2021-11-22T13:41:41Z"
+         ]
+      ],
+      "name" : "nixos-21.05-aarch64"
+   },
+   {
+      "history" : [
+         [
             "983bd5b78c17dfb347070102b72c9c40c3f5e1c4",
             "2021-08-24T02:02:32Z"
          ],
@@ -2257,6 +2266,15 @@ const graphData = [
          ]
       ],
       "name" : "nixos-20.09"
+   },
+   {
+      "history" : [
+         [
+            "47e580e291ff40bbde191e9fed35128727963b0c",
+            "2021-11-22T13:41:40Z"
+         ]
+      ],
+      "name" : "nixos-20.09-aarch64"
    },
    {
       "history" : [
