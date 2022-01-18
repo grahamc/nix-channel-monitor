@@ -1973,6 +1973,10 @@ const graphData = [
          [
             "668e5097cc4a03e3d0303a584445ce446b70fa5c",
             "2022-01-18T18:51:38Z"
+         ],
+         [
+            "610d4ea2750e064bf34b33fa38cb671edd893d3d",
+            "2022-01-18T19:21:58Z"
          ]
       ],
       "name" : "nixos-21.11-small"
@@ -2082,6 +2086,10 @@ const graphData = [
          [
             "64c7e3388bbd9206e437713351e814366e0c3284",
             "2021-12-23T19:21:38Z"
+         ],
+         [
+            "6afc3b137a34a56ce2e3e19d0cc1d45ddc77dacc",
+            "2022-01-18T19:22:01Z"
          ]
       ],
       "name" : "nixpkgs-21.11-darwin"
