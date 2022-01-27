@@ -1989,6 +1989,10 @@ const graphData = [
          [
             "043f3d6493415fa51ea24d1228bbee82e4aac306",
             "2022-01-27T12:21:45Z"
+         ],
+         [
+            "97885bb7dd36b559c511c20d13e13affb9fef678",
+            "2022-01-27T17:51:46Z"
          ]
       ],
       "name" : "nixos-21.11-small"
@@ -2900,15 +2904,6 @@ const graphData = [
          ]
       ],
       "name" : "nixos-20.09-small"
-   },
-   {
-      "history" : [
-         [
-            "1c1f5649bb9c1b0d98637c8c365228f57126f361",
-            "2021-10-27T17:51:30Z"
-         ]
-      ],
-      "name" : "nixpkgs-20.09-darwin"
    }
 ];
 for (const channel of graphData) {
