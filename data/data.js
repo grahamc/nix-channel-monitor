@@ -2,10 +2,6 @@ const graphData = [
    {
       "history" : [
          [
-            "29d1f6e1f625d246dcf84a78ef97b4da3cafc6ea",
-            "2021-12-01T04:50:58Z"
-         ],
-         [
             "6daa4a5c045d40e6eae60a3b6e427e8700f1c07f",
             "2021-12-02T02:11:47Z"
          ],
@@ -166,10 +162,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "c1ab62e75514ac25526e8a46ffd154bbaedef330",
-            "2021-12-01T04:50:59Z"
-         ],
          [
             "0943a5c5a089761ea06ecf95e56bab8ce84e35f3",
             "2021-12-01T11:41:39Z"
@@ -728,10 +720,6 @@ const graphData = [
    {
       "history" : [
          [
-            "af21d41260846fb9c9840a75e310e56dfe97d6a3",
-            "2021-12-01T04:51:02Z"
-         ],
-         [
             "3f03bdbceb4953c4b9e1cc672e90c96f9e95d2bc",
             "2021-12-01T14:11:39Z"
          ],
@@ -1108,10 +1096,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "96b4157790fc96e70d6e6c115e3f34bba7be490f",
-            "2021-12-01T04:50:57Z"
-         ],
          [
             "a640d8394f34714578f3e6335fc767d0755d78f9",
             "2021-12-01T21:51:33Z"
@@ -1498,10 +1482,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "6bfd8c700febc19fb8d0e3b6a6cc282228707d14",
-            "2021-12-01T04:50:58Z"
-         ],
          [
             "3c8b28abdaa7f144c93917865b4fba97fae05f72",
             "2021-12-01T10:01:40Z"
@@ -2659,10 +2639,6 @@ const graphData = [
    {
       "history" : [
          [
-            "69caefdbc691850f37148ca0dd16dfd649d66fd9",
-            "2021-12-01T04:50:56Z"
-         ],
-         [
             "cd8bc0a089e68a0657e9ea01dfdce8c237e781ed",
             "2021-12-01T12:01:39Z"
          ],
@@ -2823,10 +2799,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "69caefdbc691850f37148ca0dd16dfd649d66fd9",
-            "2021-12-01T04:51:01Z"
-         ],
          [
             "68b8c58a04e626e82a692dc6fab5ef7dc6ebca70",
             "2021-12-02T03:21:35Z"
