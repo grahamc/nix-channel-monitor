@@ -1038,10 +1038,6 @@ const graphData = [
    {
       "history" : [
          [
-            "b2168f22fd68bb01345dcd374dae266da51d479b",
-            "2022-01-11T19:31:36Z"
-         ],
-         [
             "3ddd960a3b575bf3230d0e59f42614b71f9e0db9",
             "2022-01-17T13:41:42Z"
          ],
@@ -1994,6 +1990,10 @@ const graphData = [
          [
             "e7d63bd0d50df412f5a1d8acfa3caae75522e347",
             "2022-04-11T15:32:24Z"
+         ],
+         [
+            "a31e3437d3b5d8f0b4f3bbc3b097b15b10250dab",
+            "2022-04-11T19:32:29Z"
          ]
       ],
       "name" : "nixpkgs-21.11-darwin"
