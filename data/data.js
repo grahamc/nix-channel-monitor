@@ -1244,6 +1244,10 @@ const graphData = [
          [
             "715dc137b08213aabbbe0965b78ab938e5d8d3b7",
             "2022-04-10T10:11:58Z"
+         ],
+         [
+            "838eefb4f93f2306d4614aafb9b2375f315d917f",
+            "2022-04-13T10:52:21Z"
          ]
       ],
       "name" : "nixos-21.11-aarch64"
