@@ -16,7 +16,8 @@
 
                       - please consider using my webhooks instead:
                         email me at graham at grahamc dot com or
-                        message gchristensen on #nixos on Freenode.
+                        message grahamc on Matrix:
+                        https://matrix.to/#/#community:nixos.org
 
 
                     FILE NOTES
