@@ -938,6 +938,10 @@ const graphData = [
          [
             "ab83c5d70528f1edc7080dead3a5dee61797b3ff",
             "2022-04-25T03:13:11Z"
+         ],
+         [
+            "b43d3db76831cb80db01dd2ed50d66175fa2a325",
+            "2022-04-25T17:12:50Z"
          ]
       ],
       "name" : "nixpkgs-unstable"
@@ -1424,6 +1428,10 @@ const graphData = [
          [
             "778e2dc4027e41b44154996ef77d729d40e89977",
             "2022-04-25T00:02:49Z"
+         ],
+         [
+            "c254b8c915ac912ae9ee9dc74eac555ccbf33795",
+            "2022-04-25T17:12:47Z"
          ]
       ],
       "name" : "nixos-21.11-aarch64"
