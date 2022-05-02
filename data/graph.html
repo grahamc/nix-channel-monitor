@@ -253,6 +253,11 @@ data: [
     ["6ff202cb7be0c92c81b4db0f4b7b8c8e969e8001", 1651401756000, 3],
     ["b283b64580d1872333a99af2b4cef91bb84580cf", 1651420982000, 3],
 ]},
+{name: 'nixos-20.09-small', type: 'scatter', keys: ['commit', 'x', 'y'],
+point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},
+data: [
+    ["66b0db71f463164486a36dded50bedee185e45c2", 1651485747000, 38],
+]},
 {name: 'nixpkgs-20.09-darwin', type: 'scatter', keys: ['commit', 'x', 'y'],
 point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},
 data: [
