@@ -605,6 +605,10 @@ const graphData = [
          [
             "cca7c716c29a15e6653cb3fc4d7e08eacb726993",
             "2022-05-14T14:01:46Z"
+         ],
+         [
+            "129ad108e0c4963dc6c1d281f52f8dded6669e81",
+            "2022-05-15T02:14:20Z"
          ]
       ],
       "name" : "nixos-unstable-small"
@@ -938,6 +942,10 @@ const graphData = [
          [
             "ed014c27f4d0ca772fb57d3b8985b772b0503bbd",
             "2022-05-14T17:22:03Z"
+         ],
+         [
+            "f7a22851667ac89ac1863ede0d8c386fc6eb12a0",
+            "2022-05-15T02:14:23Z"
          ]
       ],
       "name" : "nixpkgs-unstable"
@@ -2242,6 +2250,10 @@ const graphData = [
          [
             "79385ae0aacf7e02871cc8af0623123419dd7884",
             "2022-05-13T23:51:40Z"
+         ],
+         [
+            "8b3398bc7587ebb79f93dfeea1b8c574d3c6dba1",
+            "2022-05-15T02:14:22Z"
          ]
       ],
       "name" : "nixpkgs-21.11-darwin"
