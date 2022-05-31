@@ -1114,6 +1114,10 @@ const graphData = [
          [
             "7f7e833e0bde6f418c85d9cfcf39c6f71268a170",
             "2022-05-30T06:21:48Z"
+         ],
+         [
+            "e44c82bfec17800176a25e2c4e47fe9ba6b4b92b",
+            "2022-05-31T01:41:48Z"
          ]
       ],
       "name" : "nixpkgs-22.05-darwin"
