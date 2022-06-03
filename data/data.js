@@ -653,6 +653,10 @@ const graphData = [
          [
             "cbd66894e60294c14b20b34b4a00950cb224a897",
             "2022-06-02T13:32:48Z"
+         ],
+         [
+            "98e0b747df49e3edd1aa2c4e7fcc98361a17b09f",
+            "2022-06-03T03:42:47Z"
          ]
       ],
       "name" : "nixos-unstable-small"
