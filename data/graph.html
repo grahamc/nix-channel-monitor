@@ -303,6 +303,11 @@ point: {events: { click: function() { window.open("https://github.com/NixOS/nixp
 data: [
     ["1a7c2f41c3bf6d7fd443e2453e7b840cdc413375", 1651575163000, 40],
 ]},
+{name: 'nixos-21.05', type: 'scatter', keys: ['commit', 'x', 'y'],
+point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},
+data: [
+    ["046ee4af7a9f016a364f8f78eeaa356ba524ac31", 1655123527000, 41],
+]},
 {name: 'nixos-21.05-small', type: 'scatter', keys: ['commit', 'x', 'y'],
 point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},
 data: [
