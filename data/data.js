@@ -1125,6 +1125,24 @@ const graphData = [
    {
       "history" : [
          [
+            "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
+            "2022-06-21T13:21:56Z"
+         ]
+      ],
+      "name" : "nixos-test-staging-baseline"
+   },
+   {
+      "history" : [
+         [
+            "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
+            "2022-06-21T13:21:55Z"
+         ]
+      ],
+      "name" : "nixos-test-staging"
+   },
+   {
+      "history" : [
+         [
             "6efc186e6079ff3f328a2497ff3d36741ac60f6e",
             "2022-05-26T23:41:55Z"
          ],
