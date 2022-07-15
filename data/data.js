@@ -1526,6 +1526,10 @@ const graphData = [
          [
             "15968d3de8fd425d7aa3ba26ad9e8f493e7d4c9c",
             "2022-07-13T15:30:40Z"
+         ],
+         [
+            "8fa57a6538dcdd903a740386ec945ef247c8b577",
+            "2022-07-15T01:52:05Z"
          ]
       ],
       "name" : "nixos-22.05-aarch64"
