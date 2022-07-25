@@ -692,10 +692,6 @@ const graphData = [
    {
       "history" : [
          [
-            "2ea2f7b6d0cb7ce0712f2aa80303cda08deb0de2",
-            "2022-04-25T22:22:32Z"
-         ],
-         [
             "1d395b2c9a82a8bca6f7f67640641c73e833f3d4",
             "2022-04-26T01:12:20Z"
          ],
@@ -1518,6 +1514,10 @@ const graphData = [
          [
             "2e14bc76ab41c60ba57fd57ff52badaa29d349f5",
             "2022-07-25T15:33:35Z"
+         ],
+         [
+            "01304725d407686c08e4ad98a43b50329f5f265f",
+            "2022-07-25T22:32:02Z"
          ]
       ],
       "name" : "nixos-22.05-aarch64"
