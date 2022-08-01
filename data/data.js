@@ -2019,6 +2019,10 @@ const graphData = [
          [
             "8b7ba20e599e3ea8aee4f99e17caf9a0981f08bf",
             "2022-08-01T09:12:05Z"
+         ],
+         [
+            "13ddb2c617850f67a6edf999bd68286bdd3948bc",
+            "2022-08-01T09:32:07Z"
          ]
       ],
       "name" : "nixos-22.05-small"
