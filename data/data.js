@@ -3054,10 +3054,6 @@ const graphData = [
    {
       "history" : [
          [
-            "66a2919980c87f22fa199f9e2210ea71504f2fd0",
-            "2022-05-02T09:42:35Z"
-         ],
-         [
             "9e49886b3d83d18ca59f66ec7b388315fa3d2e60",
             "2022-05-03T00:17:28Z"
          ],
@@ -3392,15 +3388,6 @@ const graphData = [
          ]
       ],
       "name" : "nixos-20.09-small"
-   },
-   {
-      "history" : [
-         [
-            "66b0db71f463164486a36dded50bedee185e45c2",
-            "2022-05-02T09:42:34Z"
-         ]
-      ],
-      "name" : "nixpkgs-20.09-darwin"
    }
 ];
 for (const channel of graphData) {
