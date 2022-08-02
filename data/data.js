@@ -1202,19 +1202,19 @@ const graphData = [
       "history" : [
          [
             "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
-            "2022-06-21T13:21:55Z"
+            "2022-06-21T13:21:56Z"
          ]
       ],
-      "name" : "nixos-test-staging"
+      "name" : "nixos-test-staging-baseline"
    },
    {
       "history" : [
          [
             "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
-            "2022-06-21T13:21:56Z"
+            "2022-06-21T13:21:55Z"
          ]
       ],
-      "name" : "nixos-test-staging-baseline"
+      "name" : "nixos-test-staging"
    },
    {
       "history" : [
@@ -1421,6 +1421,10 @@ const graphData = [
          [
             "ede02b4ccb13557b95058d66146640a2b0bb198f",
             "2022-08-01T02:52:21Z"
+         ],
+         [
+            "e43cf1748462c81202a32b26294e9f8eefcc3462",
+            "2022-08-02T02:02:07Z"
          ]
       ],
       "name" : "nixos-22.05"
