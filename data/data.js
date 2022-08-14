@@ -255,10 +255,6 @@ const graphData = [
    {
       "history" : [
          [
-            "be2ceab96f3aee5e586a427a2d28331ccbd4c7da",
-            "2022-05-14T04:01:56Z"
-         ],
-         [
             "cca7c716c29a15e6653cb3fc4d7e08eacb726993",
             "2022-05-14T14:01:46Z"
          ],
