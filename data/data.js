@@ -1350,19 +1350,19 @@ const graphData = [
       "history" : [
          [
             "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
-            "2022-06-21T13:21:55Z"
+            "2022-06-21T13:21:56Z"
          ]
       ],
-      "name" : "nixos-test-staging"
+      "name" : "nixos-test-staging-baseline"
    },
    {
       "history" : [
          [
             "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
-            "2022-06-21T13:21:56Z"
+            "2022-06-21T13:21:55Z"
          ]
       ],
-      "name" : "nixos-test-staging-baseline"
+      "name" : "nixos-test-staging"
    },
    {
       "history" : [
@@ -2487,6 +2487,10 @@ const graphData = [
          [
             "a5c89f496b91b441f5259c29bd48b62e0d265b25",
             "2022-08-24T07:52:22Z"
+         ],
+         [
+            "294ef54a1e8cdcdd298c79edbdb3713ceae46988",
+            "2022-08-25T06:22:27Z"
          ]
       ],
       "name" : "nixos-22.05-small"
@@ -3040,6 +3044,10 @@ const graphData = [
          [
             "a5c89f496b91b441f5259c29bd48b62e0d265b25",
             "2022-08-24T14:11:57Z"
+         ],
+         [
+            "294ef54a1e8cdcdd298c79edbdb3713ceae46988",
+            "2022-08-25T06:22:30Z"
          ]
       ],
       "name" : "nixpkgs-22.05-darwin"
