@@ -805,6 +805,10 @@ const graphData = [
          [
             "3bbe5c61d3b8aaa7af8bf375dce2858385607186",
             "2022-08-25T13:42:09Z"
+         ],
+         [
+            "d50c2c2f895d7da93bee5df2382d8f569889c47d",
+            "2022-08-27T00:51:57Z"
          ]
       ],
       "name" : "nixos-unstable-small"
@@ -1342,15 +1346,6 @@ const graphData = [
       "history" : [
          [
             "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
-            "2022-06-21T13:21:56Z"
-         ]
-      ],
-      "name" : "nixos-test-staging-baseline"
-   },
-   {
-      "history" : [
-         [
-            "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
             "2022-06-21T13:21:55Z"
          ]
       ],
@@ -1359,9 +1354,14 @@ const graphData = [
    {
       "history" : [
          [
-            "6efc186e6079ff3f328a2497ff3d36741ac60f6e",
-            "2022-05-26T23:41:55Z"
-         ],
+            "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
+            "2022-06-21T13:21:56Z"
+         ]
+      ],
+      "name" : "nixos-test-staging-baseline"
+   },
+   {
+      "history" : [
          [
             "d1086907f56c5a6c33c0c2e8dc9f42ef6988294f",
             "2022-05-28T16:21:54Z"
@@ -1937,10 +1937,6 @@ const graphData = [
    {
       "history" : [
          [
-            "787b1647a91a1d14b749d8c904ebf629afe5548d",
-            "2022-05-26T20:22:06Z"
-         ],
-         [
             "7ec4e5339010283440132e8dc010f49ae1f2e6c4",
             "2022-05-28T04:31:42Z"
          ],
@@ -2495,16 +2491,16 @@ const graphData = [
          [
             "5f17353d51c38d56df382517b038f37b8fc02f93",
             "2022-08-25T14:02:15Z"
+         ],
+         [
+            "5545afa395e8c5ff7b11fe8a9e3afcdc597c8583",
+            "2022-08-27T00:51:55Z"
          ]
       ],
       "name" : "nixos-22.05-small"
    },
    {
       "history" : [
-         [
-            "6848cb6bfc2b434c59c95ae09a5b3f9bba515ec1",
-            "2022-05-26T23:43:51Z"
-         ],
          [
             "41d80aaff9e9b427779e30b61d94fa5813f058d8",
             "2022-05-27T09:11:51Z"
