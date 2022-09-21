@@ -15,16 +15,6 @@
     },
   },
   series: [
-{name: 'nixos-test-staging-baseline', type: 'scatter', keys: ['commit', 'x', 'y'],
-point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},
-data: [
-    ["0d68d7c857fe301d49cdcd56130e0beea4ecd5aa", 1655817716000, 1],
-]},
-{name: 'nixos-test-staging', type: 'scatter', keys: ['commit', 'x', 'y'],
-point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},
-data: [
-    ["0d68d7c857fe301d49cdcd56130e0beea4ecd5aa", 1655817715000, 2],
-]},
 {name: 'nixos-unstable', type: 'scatter', keys: ['commit', 'x', 'y'],
 point: {events: { click: function() { window.open("https://github.com/NixOS/nixpkgs/commit/" + this.commit); }}},
 data: [
