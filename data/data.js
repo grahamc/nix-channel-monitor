@@ -1274,19 +1274,19 @@ const graphData = [
       "history" : [
          [
             "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
-            "2022-06-21T13:21:55Z"
+            "2022-06-21T13:21:56Z"
          ]
       ],
-      "name" : "nixos-test-staging"
+      "name" : "nixos-test-staging-baseline"
    },
    {
       "history" : [
          [
             "0d68d7c857fe301d49cdcd56130e0beea4ecd5aa",
-            "2022-06-21T13:21:56Z"
+            "2022-06-21T13:21:55Z"
          ]
       ],
-      "name" : "nixos-test-staging-baseline"
+      "name" : "nixos-test-staging"
    },
    {
       "history" : [
@@ -2820,6 +2820,10 @@ const graphData = [
          [
             "e64df9c5c8ffa0c9a82006e410ad630e32e6063d",
             "2022-09-21T04:22:09Z"
+         ],
+         [
+            "cafad185b7486732d6b6e0b8447588e22216c020",
+            "2022-09-21T07:04:29Z"
          ]
       ],
       "name" : "nixpkgs-22.05-darwin"
