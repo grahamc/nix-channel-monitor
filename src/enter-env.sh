@@ -32,11 +32,6 @@ export VAULT_TOKEN=$(jq -r .auth.client_token <<<"$vault_creds")
 echo "--> Setting variables: AMQPAPI, AWS_ACCESS_KEY_ID" >&2
 echo "                       AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN" >&2
 
-AMQPAPI=$(vault read rabbitmq_ircbot/creds/channel-bump -format=json |
-  jq -r '"https://" + .data.username + ":" + .data.password + "@devoted-teal-duck.rmq.cloudamqp.com"')
-export AMQPAPI
-
-
 aws_creds=$(vault kv get -format=json aws-personal/creds/write-s3-bucket-channels.nix.gsc.io)
 AWS_ACCESS_KEY_ID=$(jq -r .data.access_key <<<"$aws_creds")
 AWS_SECRET_ACCESS_KEY=$(jq -r .data.secret_key <<<"$aws_creds")
