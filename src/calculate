@@ -7,41 +7,6 @@ dbg() {
   echo "$@" >&2
 }
 
-publish() {
-  msg=$(cat | head -n1)
-  jq -c -n '$ARGS.named' \
-    --argjson properties '{}' \
-    --arg routing_key "queue-publish" \
-    --arg payload_encoding "string" \
-    --arg payload "$(
-      jq -c -n '$ARGS.named' \
-        --arg target "#nixos" \
-        --arg body "$msg" \
-        --arg message_type "notice"
-    )" |
-    curl -v \
-      -H "content-type:application/json" \
-      -XPOST \
-      "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
-      --data @-
-
-  jq -c -n '$ARGS.named' \
-    --argjson properties '{}' \
-    --arg routing_key "queue-publish" \
-    --arg payload_encoding "string" \
-    --arg payload "$(
-      jq -c -n '$ARGS.named' \
-        --arg target "#nixos-bots" \
-        --arg body "$msg" \
-        --arg message_type "notice"
-    )" |
-    curl -v \
-      -H "content-type:application/json" \
-      -XPOST \
-      "$AMQPAPI"/api/exchanges/ircbot/amq.default/publish \
-      --data @-
-}
-
 filter_recent_timestamps() {
   since=$(date -d "3 months ago" "+%s")
   # shellcheck disable=SC2034
@@ -159,7 +124,7 @@ readonly dest="$2"
             cd "$gitrepo" >&2
             printf "Channel %s advanced to " "$branch"
             git show -s --format="https://github.com/NixOS/nixpkgs/commit/%h (from %cr, history: $URL/$name)" "$remote/$branch"
-          ) | publish
+          ) | cat # publish
           mv latest.next latest
           chmod a+r latest
           touch history
