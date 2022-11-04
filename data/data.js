@@ -2389,15 +2389,6 @@ const graphData = [
    {
       "history" : [
          [
-            "eabc38219184cc3e04a974fe31857d8e0eac098d",
-            "2022-08-04T15:02:08Z"
-         ]
-      ],
-      "name" : "nixos-21.11-aarch64"
-   },
-   {
-      "history" : [
-         [
             "022caabb5f2265ad4006c1fa5b1ebe69fb0c3faf",
             "2022-08-09T00:32:17Z"
          ]
