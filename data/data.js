@@ -2390,15 +2390,6 @@ const graphData = [
       "history" : [
          [
             "eabc38219184cc3e04a974fe31857d8e0eac098d",
-            "2022-08-04T14:51:50Z"
-         ]
-      ],
-      "name" : "nixos-21.11"
-   },
-   {
-      "history" : [
-         [
-            "eabc38219184cc3e04a974fe31857d8e0eac098d",
             "2022-08-04T15:02:08Z"
          ]
       ],
