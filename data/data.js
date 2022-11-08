@@ -2406,15 +2406,6 @@ const graphData = [
          ]
       ],
       "name" : "nixos-21.05"
-   },
-   {
-      "history" : [
-         [
-            "022caabb5f2265ad4006c1fa5b1ebe69fb0c3faf",
-            "2022-08-08T23:13:20Z"
-         ]
-      ],
-      "name" : "nixos-21.05-small"
    }
 ];
 for (const channel of graphData) {
