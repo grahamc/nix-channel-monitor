@@ -700,10 +700,6 @@ const graphData = [
    {
       "history" : [
          [
-            "9f15d6c3a74d2778c6e1af67947c95f100dc6fd2",
-            "2022-08-09T07:16:39Z"
-         ],
-         [
             "65f39b913d0910907ea22be29f108402924644c2",
             "2022-08-10T07:12:05Z"
          ],
@@ -1186,6 +1182,10 @@ const graphData = [
          [
             "9f1f990aee8ca8bc847bf41feabe0d91d8a59dc4",
             "2022-11-08T23:02:57Z"
+         ],
+         [
+            "bbf77421ac51a7c93f5f0f760da99e4dbce614fa",
+            "2022-11-09T07:22:17Z"
          ]
       ],
       "name" : "nixpkgs-unstable"
