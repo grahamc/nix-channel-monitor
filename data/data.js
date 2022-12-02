@@ -2,6 +2,24 @@ const graphData = [
    {
       "history" : [
          [
+            "5a3c1eda46ef4b0bbd782d5b6443a0dd9263d094",
+            "2022-12-02T12:02:55Z"
+         ]
+      ],
+      "name" : "nixpkgs-vnc"
+   },
+   {
+      "history" : [
+         [
+            "7f2e8f6367043ba22edf37a2d417faa2e7c591a5",
+            "2022-12-02T12:02:55Z"
+         ]
+      ],
+      "name" : "nixpkgs-upstream"
+   },
+   {
+      "history" : [
+         [
             "2da64a81275b68fdad38af669afeda43d401e94b",
             "2022-09-02T14:13:34Z"
          ],
@@ -1205,6 +1223,33 @@ const graphData = [
          ]
       ],
       "name" : "nixpkgs-unstable"
+   },
+   {
+      "history" : [
+         [
+            "eea1feebb4a59a7a408956dd31fa1e774fe87d8a",
+            "2022-12-02T12:02:55Z"
+         ]
+      ],
+      "name" : "nixpkgs-tests"
+   },
+   {
+      "history" : [
+         [
+            "7f2e8f6367043ba22edf37a2d417faa2e7c591a5",
+            "2022-12-02T12:02:54Z"
+         ]
+      ],
+      "name" : "nixpkgs-test"
+   },
+   {
+      "history" : [
+         [
+            "7f2e8f6367043ba22edf37a2d417faa2e7c591a5",
+            "2022-12-02T12:02:54Z"
+         ]
+      ],
+      "name" : "nixpkgs-spectrum-os"
    },
    {
       "history" : [
