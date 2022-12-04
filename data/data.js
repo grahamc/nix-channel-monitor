@@ -1422,6 +1422,10 @@ const graphData = [
          [
             "b75590a1f997a07cece90948e226ab6e8a826a5c",
             "2022-12-03T22:31:53Z"
+         ],
+         [
+            "4a8306947aa965121c7c38221d6f73e438a5d55e",
+            "2022-12-04T08:42:12Z"
          ]
       ],
       "name" : "nixpkgs-22.11-darwin"
@@ -2582,6 +2586,10 @@ const graphData = [
          [
             "d6d5a5e772bed9bcd04f3c847c3ea7a4cd4b4063",
             "2022-12-03T17:42:25Z"
+         ],
+         [
+            "aac972f178eda84a7a7ec8a698bc7bbf43642be5",
+            "2022-12-04T08:42:12Z"
          ]
       ],
       "name" : "nixpkgs-22.05-darwin"
