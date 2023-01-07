@@ -230,6 +230,10 @@ const graphData = [
          [
             "9813adc7f7c0edd738c6bdd8431439688bb0cb3d",
             "2023-01-05T06:52:20Z"
+         ],
+         [
+            "a518c77148585023ff56022f09c4b2c418a51ef5",
+            "2023-01-07T00:42:55Z"
          ]
       ],
       "name" : "nixos-unstable"
@@ -1304,6 +1308,10 @@ const graphData = [
          [
             "298add347c2bbce14020fcb54051f517c391196b",
             "2023-01-03T21:42:43Z"
+         ],
+         [
+            "f1ffcf798e93b169321106a4aef79526a2b4bd0a",
+            "2023-01-07T00:42:58Z"
          ]
       ],
       "name" : "nixpkgs-unstable"
