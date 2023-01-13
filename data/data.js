@@ -20,10 +20,6 @@ const graphData = [
    {
       "history" : [
          [
-            "285e77efe87df64105ec14b204de6636fb0a7a27",
-            "2022-10-13T03:12:05Z"
-         ],
-         [
             "f634d427b0224a5f531ea5aa10c3960ba6ec5f0f",
             "2022-10-13T10:21:56Z"
          ],
@@ -256,10 +252,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "4820e2da740d45f8a434dd8c172685e18273bfc8",
-            "2022-10-13T03:12:05Z"
-         ],
          [
             "7a94322ed7898db6d9b308b76a6bb4a0c6f99c38",
             "2022-10-13T10:32:09Z"
@@ -853,10 +845,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "e0ed589d7422c1d7a1bdd1e81289e2428c6ec2a3",
-            "2022-10-13T03:12:07Z"
-         ],
          [
             "3dae05bb9193f3910f1ac0251b1c1eb4f7f07872",
             "2022-10-13T04:21:48Z"
@@ -2289,10 +2277,6 @@ const graphData = [
    {
       "history" : [
          [
-            "9234f5a17e1a7820b5e91ecd4ff0de449e293383",
-            "2022-10-13T03:12:04Z"
-         ],
-         [
             "e06bd4b64bbfda91d74f13cb5eca89485d47528f",
             "2022-10-14T02:22:05Z"
          ],
@@ -2509,10 +2493,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "cded5ae4dfc9443edb867537a7ad5b320eb02d79",
-            "2022-10-13T03:12:04Z"
-         ],
          [
             "e06bd4b64bbfda91d74f13cb5eca89485d47528f",
             "2022-10-13T05:12:29Z"
@@ -2734,10 +2714,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "9234f5a17e1a7820b5e91ecd4ff0de449e293383",
-            "2022-10-13T03:12:04Z"
-         ],
          [
             "e06bd4b64bbfda91d74f13cb5eca89485d47528f",
             "2022-10-13T17:23:10Z"
@@ -3099,10 +3075,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "9234f5a17e1a7820b5e91ecd4ff0de449e293383",
-            "2022-10-13T03:12:06Z"
-         ],
          [
             "e06bd4b64bbfda91d74f13cb5eca89485d47528f",
             "2022-10-13T16:52:36Z"
