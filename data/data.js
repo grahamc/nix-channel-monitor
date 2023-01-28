@@ -261,10 +261,6 @@ const graphData = [
    {
       "history" : [
          [
-            "47293efac99595f29f28f58bc8c161137a543df5",
-            "2022-10-28T14:02:05Z"
-         ],
-         [
             "6b8b5a7328d930328add0bb38d066fbe2a22cc6b",
             "2022-10-29T14:32:10Z"
          ],
@@ -1688,6 +1684,10 @@ const graphData = [
          [
             "cc4bb87f5457ba06af9ae57ee4328a49ce674b1b",
             "2023-01-27T12:04:02Z"
+         ],
+         [
+            "ce20e9ebe1903ea2ba1ab006ec63093020c761cb",
+            "2023-01-28T14:03:03Z"
          ]
       ],
       "name" : "nixos-22.11"
