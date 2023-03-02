@@ -2,24 +2,6 @@ const graphData = [
    {
       "history" : [
          [
-            "5a3c1eda46ef4b0bbd782d5b6443a0dd9263d094",
-            "2022-12-02T12:02:55Z"
-         ]
-      ],
-      "name" : "nixpkgs-vnc"
-   },
-   {
-      "history" : [
-         [
-            "7f2e8f6367043ba22edf37a2d417faa2e7c591a5",
-            "2022-12-02T12:02:55Z"
-         ]
-      ],
-      "name" : "nixpkgs-upstream"
-   },
-   {
-      "history" : [
-         [
             "b72b8b94cf0c012b0252a9100a636cad69696666",
             "2022-12-03T15:01:53Z"
          ],
@@ -1451,33 +1433,6 @@ const graphData = [
    {
       "history" : [
          [
-            "eea1feebb4a59a7a408956dd31fa1e774fe87d8a",
-            "2022-12-02T12:02:55Z"
-         ]
-      ],
-      "name" : "nixpkgs-tests"
-   },
-   {
-      "history" : [
-         [
-            "7f2e8f6367043ba22edf37a2d417faa2e7c591a5",
-            "2022-12-02T12:02:54Z"
-         ]
-      ],
-      "name" : "nixpkgs-test"
-   },
-   {
-      "history" : [
-         [
-            "7f2e8f6367043ba22edf37a2d417faa2e7c591a5",
-            "2022-12-02T12:02:54Z"
-         ]
-      ],
-      "name" : "nixpkgs-spectrum-os"
-   },
-   {
-      "history" : [
-         [
             "14c7bd44711b04c05cb78412451005415310b6bd",
             "2022-12-02T22:32:31Z"
          ],
@@ -2435,10 +2390,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "2643cd28638a073e63eb58457e27a991fafb954d",
-            "2022-12-02T12:12:07Z"
-         ],
          [
             "6f87491a54d8d64d30af6663cb3bf5d2ee7db958",
             "2022-12-02T23:44:04Z"
