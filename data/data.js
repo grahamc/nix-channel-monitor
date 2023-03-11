@@ -228,6 +228,10 @@ const graphData = [
          [
             "1e2590679d0ed2cee2736e8b80373178d085d263",
             "2023-03-10T09:34:03Z"
+         ],
+         [
+            "0c4800d579af4ed98ecc47d464a5e7b0870c4b1f",
+            "2023-03-11T06:43:42Z"
          ]
       ],
       "name" : "nixos-unstable"
