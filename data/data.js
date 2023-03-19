@@ -2,10 +2,6 @@ const graphData = [
    {
       "history" : [
          [
-            "04f574a1c0fde90b51bf68198e2297ca4e7cccf4",
-            "2022-12-19T17:26:30Z"
-         ],
-         [
             "652e92b8064949a11bc193b90b74cb727f2a1405",
             "2022-12-23T16:12:21Z"
          ],
@@ -234,10 +230,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "ff07b107adeda2164b29f8feb4a86ed012854dfb",
-            "2022-12-19T17:26:30Z"
-         ],
          [
             "3c6d63d22ca8b57adc4120f7c1ea5262925c8c2d",
             "2022-12-21T08:32:46Z"
@@ -891,10 +883,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "bb31220cca6d044baa6dc2715b07497a2a7c4bc7",
-            "2022-12-19T17:26:32Z"
-         ],
          [
             "e37ef84b478fa8da0ced96522adfd956fde9047a",
             "2022-12-20T12:42:28Z"
@@ -1682,10 +1670,6 @@ const graphData = [
    {
       "history" : [
          [
-            "d3cf188b498a7dc936de67254ba2fdafcf5a1368",
-            "2022-12-19T17:26:29Z"
-         ],
-         [
             "ba86945ee00a5c046f68451c1db279ea5e2bc797",
             "2022-12-20T16:12:03Z"
          ],
@@ -2320,16 +2304,16 @@ const graphData = [
          [
             "87a53fcf2cf81bb9311e2653cf97830e25ca6cf5",
             "2023-03-19T07:43:16Z"
+         ],
+         [
+            "eac7da7b519a5aefe92c33c90b4450a24ebe0ab3",
+            "2023-03-19T17:32:29Z"
          ]
       ],
       "name" : "nixos-22.11-small"
    },
    {
       "history" : [
-         [
-            "09e8ac77744dd036e58ab2284e6f5c03a6d6ed41",
-            "2022-12-19T17:26:32Z"
-         ],
          [
             "5cf7103c0b6702e9c974051248eaa1e9061346de",
             "2022-12-22T08:42:22Z"
@@ -2771,10 +2755,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "e398530d85d637bf1fa75768b2df2e76484dea3c",
-            "2022-12-19T17:26:28Z"
-         ],
          [
             "bfb04388d42ff49e5e81da9f0bfcb48a6367273d",
             "2022-12-20T22:42:20Z"
