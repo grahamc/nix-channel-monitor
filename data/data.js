@@ -2670,15 +2670,6 @@ const graphData = [
          ]
       ],
       "name" : "nixos-22.05-aarch64"
-   },
-   {
-      "history" : [
-         [
-            "0874168639713f547c05947c76124f78441ea46c",
-            "2023-01-02T13:13:12Z"
-         ]
-      ],
-      "name" : "nixpkgs-22.05-darwin"
    }
 ];
 for (const channel of graphData) {
