@@ -2644,15 +2644,6 @@ const graphData = [
          ]
       ],
       "name" : "nixpkgs-22.11-darwin"
-   },
-   {
-      "history" : [
-         [
-            "0874168639713f547c05947c76124f78441ea46c",
-            "2023-01-03T15:42:02Z"
-         ]
-      ],
-      "name" : "nixos-22.05"
    }
 ];
 for (const channel of graphData) {
