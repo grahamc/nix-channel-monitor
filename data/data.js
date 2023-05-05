@@ -2,10 +2,6 @@ const graphData = [
    {
       "history" : [
          [
-            "0591d6b57bfeb55dfeec99a671843337bc2c3323",
-            "2023-02-05T05:12:19Z"
-         ],
-         [
             "5a350a8f31bb7ef0c6e79aea3795a890cf7743d4",
             "2023-02-07T04:22:29Z"
          ],
@@ -855,10 +851,6 @@ const graphData = [
    },
    {
       "history" : [
-         [
-            "19ad2a2b84a99b8025ace91ba7b80d12d8ae71db",
-            "2023-02-05T05:12:22Z"
-         ],
          [
             "d840126a0890621e7b220894d749132dd4bde6a0",
             "2023-02-05T10:42:38Z"
@@ -2112,16 +2104,16 @@ const graphData = [
          [
             "cc45a3f8c98e1c33ca996e3504adefbf660a72d1",
             "2023-05-04T19:13:29Z"
+         ],
+         [
+            "2ff68df8a8dab8851172c5fae13fabd11e3e3d7b",
+            "2023-05-05T05:12:36Z"
          ]
       ],
       "name" : "nixos-22.11-small"
    },
    {
       "history" : [
-         [
-            "e32c33811815ca4a535a16faf1c83eeb4493145b",
-            "2023-02-05T05:12:21Z"
-         ],
          [
             "cff83d5032a21aad4f69bf284e95b5f564f4a54e",
             "2023-02-05T18:02:51Z"
