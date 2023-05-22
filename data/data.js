@@ -1582,10 +1582,6 @@ const graphData = [
    {
       "history" : [
          [
-            "2dc8a48c5b96871e64ede71e387d60204cde16ae",
-            "2023-02-22T21:22:02Z"
-         ],
-         [
             "c95bf18beba4290af25c60cbaaceea1110d0f727",
             "2023-02-22T22:02:25Z"
          ],
